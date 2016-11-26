@@ -9,6 +9,7 @@ var teamcityRouter = require('./src/routes/teamcityRouter')();
 var octopusRouter = require('./src/routes/octopusRouter')();
 var projectRouter = require('./src/routes/projectRouter')();
 var slackRouter = require('./src/routes/slackRouter')();
+var tentacleRouter = require('./src/routes/tentacleRouter')();
 
 app.use(express.static('public'));
 
@@ -21,6 +22,7 @@ app.use('/teamcity', teamcityRouter);
 app.use('/octopus', octopusRouter);
 app.use('/projects', projectRouter);
 app.use('/slack', slackRouter);
+app.use('/tentacle', tentacleRouter);
 
 
 app.get('/', function (req, res) {

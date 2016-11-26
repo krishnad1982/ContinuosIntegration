@@ -1,153 +1,108 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+<head>
+  <% include ./partials/head %>
+</head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<body>
+  <header>
+    <% include ./partials/header %>
+  </header>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <div class="container">
+    <h1>General Settings</h1>
+    <hr>
+  </div>
+  </div>
 
-    <!-- Custom styles for this template -->
-    <link href="./css/jumbotron.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Continuous Integration</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-           
-          </form>
-        </div><!--/.navbar-collapse -->
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-6">
+        <h3>1 - Install Java JDK</h3>
+        <section class="well">
+          <p>
+            You have to install Java JDK X86 version. Find the path here:<br/> <a href="#">file://ZA01-TeamCity/BuildAutomationTools/JavaJDK</a>.<br/>
+            <ul class="list-group">
+              <li class="list-group-item">Install x86 version and create a folder named "jdk1.6.0_22" in "C:\Program Files (x86)\Java".</li>
+              <li class="list-group-item">copy everything from the latest jdk installed folder "C:\Program Files (x86)\Java\jdk1.8.0_111" to this foder
+                "jdk1.6.0_22".</li>
+              <ul>
+          </p>
+        </section>
+        <h3>3 - MVC Versions 1.0 and 2.0</h3>
+        <section class="well">
+          <p>
+            Find the path here: <br/>
+            <a href="#">file://ZA01-TeamCity/BuildAutomationTools/MVC Versions</a><br/>
+          </p>
+        </section>
+        <h3>5 - Install WIX Tools</h3>
+        <section class="well">
+          <p>
+            Insatll wix to build perfixwixconnect project properly.Once the insatllation is complete continue with the steps described
+            below. Find the path here: <br/>
+            <a href="#">file://ZA01-TeamCity/BuildAutomationTools/VS10sp1-KB983509</a><br/>
+            <ul class="list-group">
+              <li class="list-group-item">create a folder called "Windows Installer XML v3.5" in "C:\Program Files (x86)\".</li>
+              <li class="list-group-item">copy al the files [don't delete it from this folder] from "C:\Program Files (x86)\WiX Toolset v3.9" to "C:\Program
+                Files (x86)\Windows Installer XML v3.5".</li>
+              <ul>
+          </p>
+        </section>
+        <h3>7 - Install SQL-2012 or Latest Version</h3>
+        <section class="well">
+          <p>
+            Ask the IT Support team to provide the SQL set up.
+          </p>
+        </section>
       </div>
-    </nav>
-
-      <div class="container">
-        <h1>General Settings</h1><hr>
+      <div class="col-md-6">
+        <h3>2 - Install Visual Studio 2010 And 2013</h3>
+        <section class="well">
+          <p>
+            You have to install both visual studio 2010 and 2013 in the build server since we are using visual studio 2010 debugging
+            tools in some of our old projects. Find the path here: <br/>
+            <a href="#">file://JHB-FS1/Software/VS2013</a><br/>
+            <a href="#">file://JHB-FS1/Freeware/Visual Studio 2010 Ultimate</a></p>
+        </section>
+        <h3>4 - Visual Studio 2010 Service Pack-1 Update</h3>
+        <section class="well">
+          <p>
+            Find the path here: <br/>
+            <a href="#">file://ZA01-TeamCity/BuildAutomationTools/VS10sp1-KB983509</a><br/>
+          </p>
+        </section>
+        <h3>6 - TFS PowerShell Tools</h3>
+        <section class="well">
+          <p>
+            Find the path here: <br/>
+            <a href="#">file://ZA01-TeamCity/BuildAutomationTools/TFS PowerShell Tools</a><br/>
+            <ul class="list-group">
+              <li class="list-group-item">Update the powershell version to powershell version 5.0.</li>
+              <li class="list-group-item">Install <b>"Visual Studio Team Foundation Server 2013 Update 2 Power Tools"</b> to feed the TFS changeset details
+                from to TeamCity and Octopus as release notes..</li>
+              <li class="list-group-item">PowerShell- Markdown Converter [This tool is to format the release note on Octopus.]</li>
+              <li class="list-group-item">Run this command on the powershell command prompt <br/><b>[Install-Module -Name PSMarkdown]</b></li>
+              <ul>
+          </p>
+        </section>
+        <h3>Finished</h3>
+        <section class="well">
+          <p><a href="/teamcity">Go For TeamCity Installation.</a></p>
+        </section>
       </div>
     </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-6">
-        <h3>1 - Install Java JDK</h3>
-        <section class="well">
-  <p>
-  You have to install Java JDK X86 version. Find the path here:<br/> <a href="#">file://ZA01-TeamCity/BuildAutomationTools/JavaJDK</a>.<br/>
-  <ul class="list-group">
-  <li class="list-group-item">Install x86 version and create a folder named "jdk1.6.0_22" in "C:\Program Files (x86)\Java".</li>
-  <li class="list-group-item">copy everything from the latest jdk installed folder  "C:\Program Files (x86)\Java\jdk1.8.0_111" to this foder "jdk1.6.0_22".</li>
-  <ul></p>
-</section>
-<h3>3 - MVC Versions 1.0 and 2.0</h3>
-    <section class="well">
-  <p>
-  Find the path here: <br/>
-  <a href="#">file://ZA01-TeamCity/BuildAutomationTools/MVC Versions</a><br/>
-  </p>
-</section>
-<h3>5 - Install WIX Tools</h3>
-<section class="well">
-  <p>
-  Insatll wix to build perfixwixconnect project properly.Once the insatllation is complete continue with the steps described below.
-  Find the path here: <br/>
-  <a href="#">file://ZA01-TeamCity/BuildAutomationTools/VS10sp1-KB983509</a><br/>
-  <ul class="list-group">
-  <li class="list-group-item">create a folder called "Windows Installer XML v3.5" in "C:\Program Files (x86)\".</li>
-  <li class="list-group-item">copy al the files [don't delete it from this folder] from "C:\Program Files (x86)\WiX Toolset v3.9" to "C:\Program Files (x86)\Windows Installer XML v3.5".</li>
-  <ul>
-  </p>
-</section>
-<h3>7 - Install SQL-2012 or Latest Version</h3>
-<section class="well">
-  <p>
-  Ask the IT Support team to provide the SQL set up.
-  </p>
-</section>
-        </div>
-        <div class="col-md-6">
-        <h3>2 - Install Visual Studio 2010 And 2013</h3>
-<section class="well">
-  <p>
-  You have to install both visual studio 2010 and 2013 in the build server since we are using visual studio 2010 debugging tools in some of our old projects.
-  Find the path here: <br/>
-  <a href="#">file://JHB-FS1/Software/VS2013</a><br/>
-  <a href="#">file://JHB-FS1/Freeware/Visual Studio 2010 Ultimate</a></p>
-</section>
-<h3>4 - Visual Studio 2010 Service Pack-1 Update</h3>
-<section class="well">
-  <p>
-  Find the path here: <br/>
-  <a href="#">file://ZA01-TeamCity/BuildAutomationTools/VS10sp1-KB983509</a><br/>
-  </p>
-</section>
-<h3>6 - TFS PowerShell Tools</h3>
-<section class="well">
-  <p>
-  Find the path here: <br/>
-  <a href="#">file://ZA01-TeamCity/BuildAutomationTools/TFS PowerShell Tools</a><br/>
-  <ul class="list-group">
-  <li class="list-group-item">Update the powershell version to powershell version 5.0.</li>
-  <li class="list-group-item">Install <b>"Visual Studio Team Foundation Server 2013 Update 2 Power Tools"</b> to feed the TFS changeset details from to TeamCity and Octopus as release notes..</li>
-  <li class="list-group-item">PowerShell- Markdown Converter [This tool is to format the release note on Octopus.]</li>
-  <li class="list-group-item">Run this command on the powershell command prompt <br/><b>[Install-Module -Name PSMarkdown]</b></li>
-  <ul>
-  </p>
-</section>
-<h3>Finished</h3>
-<section class="well">
-  <p><a href="/teamcity">Go For TeamCity Installation.</a></p>
-</section>
-        </div>
-      </div>
+    <hr>
 
-      <hr>
+    <footer>
+      <% include ./partials/footer %>
+    </footer>
+  </div>
+  <!-- /container -->
 
-      <footer>
-        <p>&copy; 2016 Iress, Inc.</p>
-      </footer>
-    </div> <!-- /container -->
+</body>
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./js/ie10-viewport-bug-workaround.js"></script>
-  </body>
 </html>
