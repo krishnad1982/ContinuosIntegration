@@ -11,6 +11,8 @@ var projectRouter = require('./src/routes/projectRouter')();
 var slackRouter = require('./src/routes/slackRouter')();
 var tentacleRouter = require('./src/routes/tentacleRouter')();
 var agentRouter = require('./src/routes/agentRouter')();
+var proxyRouter = require('./src/routes/proxyRouter')();
+var keysRouter = require('./src/routes/keysRouter')();
 
 app.use(express.static('public'));
 
@@ -25,7 +27,8 @@ app.use('/projects', projectRouter);
 app.use('/slack', slackRouter);
 app.use('/tentacle', tentacleRouter);
 app.use('/agent', agentRouter);
-
+app.use('/proxy', proxyRouter);
+app.use('/keys', keysRouter);
 
 app.get('/', function (req, res) {
     res.render('index');

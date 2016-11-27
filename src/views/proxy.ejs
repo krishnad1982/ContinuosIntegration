@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/head %>
+</head>
+
+<body>
+
+    <header>
+        <% include ./partials/header %>
+    </header>
+
+    <div class="container">
+        <h1>Proxy Settings</h1>
+        <hr>
+    </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-12">
+                <section class="well">
+                    <ul class="list-group">
+                        <li class="list-group-item">Choose “Edit the system environment variables”. Select the highlighted .</li><br/>
+                        <img src="./images/proxy1.png" alt="" width="520px">
+                        <li class="list-group-item">Add new system variable and name it as JAVA_OPTS and insert the below in the value section with quotes.</li>
+                        <li class="list-group-item">
+                            "-Dproxyset=true -Dhttp.proxyHost=za01-devproxy1.devel.iress.com.au -Dhttp.proxyPort=3128 -Dhttp.nonProxyHosts=iress.com
+                            -Dhttps.proxyHost=za01-devproxy1.devel.iress.com.au -Dhttps.proxyPort=3128 -Dhttps.nonProxyHosts=iress.com"
+                        </li>
+                        <li class="list-group-item">
+                            Also include these two lines [not necessary] in the “C:\TeamCity\conf\catalina.properties” as the last entry.
+                        </li>
+                        <li class="list-group-item">
+                            http.proxyHost=za01-devproxy1.devel.iress.com.au
+                        </li>
+                        <li class="list-group-item">
+                            http.proxyPort=3128
+                        </li>
+                        <ul>
+                </section>
+            </div>
+        </div>
+        <hr>
+
+        <footer>
+            <% include ./partials/footer %>
+        </footer>
+    </div>
+    <!-- /container -->
+</body>
+
+</html>
