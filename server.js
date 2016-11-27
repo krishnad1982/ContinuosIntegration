@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 var requirementRouter = require('./src/routes/requirementsRouter')();
 var settingsRouter = require('./src/routes/settingsRouter')();
 var teamcityRouter = require('./src/routes/teamcityRouter')();
