@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/head %>
+</head>
+
+<body>
+
+    <header>
+        <% include ./partials/header %>
+    </header>
+
+    <div class="container">
+        <h1>Agent Installation</h1>
+        <hr>
+    </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Step -1</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent1.PNG" alt="">
+                        <ul>
+                </section>
+                <h3>Step -3</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent3.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -5</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent5.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -7</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent7.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -9</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <li class="list-group-item">When this popup appears <b style="color:Red">do not click OK</b> yet. Complete the step 10 and 11
+                            and click OK.</li><br/>
+                        <img src="./images/agent9.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -11</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <li class="list-group-item">Go to the path shows in the step 10 and apply a unique name to the new build agent in those highlighted
+                            areas.
+                        </li><br/>
+                        <img src="./images/agent11.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -13</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent13.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -15</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent15.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <h3>Step -2</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <li class="list-group-item">From the top right of the page choose Install Build Agents then MS Windows Installer.</li><br/>
+                        <img src="./images/agent2.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -4</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent4.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -6</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent6.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -8</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <li class="list-group-item">Here it is important that you choose a unique name and port. The directories should be consistent
+                            with your previous choices. You may need to change the server URL and port. In the serverurl
+                            field- give your TeamCity URL Ex: [localhost: 84] Name field fill with the agent name that you
+                            want to appear on the TeamCity UI. EX: [Agent 2 /James Bond]</li><br/>
+                        <img src="./images/agent8.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -10</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <li class="list-group-item">Edit wrapper.conf [check step 11] and change the name of the ntservice to match your agent name as
+                            appropriate. This is important because each agent runs under a different service and they must
+                            have unique names, otherwise only one will connect at a time.</li><br/>
+                        <img src="./images/agent10.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -12</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent12.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -14</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <img src="./images/agent14.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+                <h3>Step -16</h3>
+                <section class="well">
+                    <ul class="list-group">
+                        <li class="list-group-item">Check the windows service to verify the newly installed build agent. The new agent should connect
+                            and be visible from the TeamCity Agents page within a few moments. Repeat the steps to add additional
+                            agents.
+                        </li><br/>
+                        <img src="./images/agent16.PNG" alt="" width="520px">
+                        <ul>
+                </section>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <% include ./partials/footer %>
+        </footer>
+    </div>
+    <!-- /container -->
+
+
+</body>
+
+</html>
