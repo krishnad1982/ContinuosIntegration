@@ -13,6 +13,7 @@ var tentacleRouter = require('./src/routes/tentacleRouter')();
 var agentRouter = require('./src/routes/agentRouter')();
 var proxyRouter = require('./src/routes/proxyRouter')();
 var keysRouter = require('./src/routes/keysRouter')();
+var clientRouter = require('./src/routes/clientRouter')();
 
 app.use(express.static('public'));
 
@@ -29,6 +30,7 @@ app.use('/tentacle', tentacleRouter);
 app.use('/agent', agentRouter);
 app.use('/proxy', proxyRouter);
 app.use('/keys', keysRouter);
+app.use('/client',clientRouter);
 
 app.get('/', function (req, res) {
     res.render('index');
